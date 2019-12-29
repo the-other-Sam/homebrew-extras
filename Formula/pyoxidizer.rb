@@ -2,12 +2,12 @@ class Pyoxidizer < Formula
   desc "Modern Python application packaging and distribution tool"
   homepage "https://pyoxidizer.readthedocs.io/en/latest/index.html"
   url "https://github.com/indygreg/PyOxidizer/archive/v0.4.0.zip"
+  sha256 "4c339fecb3fac2a2e5fa2b97dbeac865379e85bf8d8ff3934870d7433b667b41"
   head "https://github.com/indygreg/PyOxidizer.git", :using => :git
   bottle do
     cellar :any
     #sha256 "64fd79987eb5276eef4c58f0148244d71f2fa05a364c69030fdf60d3b259f689" => :catalina
   end
-  
   #@name="pyoxidizer"
   #version "0.4.0"
   #sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
