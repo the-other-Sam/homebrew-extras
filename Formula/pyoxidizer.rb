@@ -16,7 +16,8 @@ class Pyoxidizer < Formula
 
   def install
     # system "cargo", "install", "--locked", "--root", prefix, "--path", "."
-    system "cargo", "install", "--root", "#{prefix}", "--version", "#{version}", "#{name}"
+    # system "cargo", "install", "--root", "#{prefix}", "--version", "#{version}", "#{name}"
+    system "cargo", "install", "--root", prefix, "--version", version, name
   end
 
   test do
