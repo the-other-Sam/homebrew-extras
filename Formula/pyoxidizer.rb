@@ -10,11 +10,11 @@ class Pyoxidizer < Formula
     sha256 "a2e2815d88798c5a3e0975d5de4c7210968ea97cbe2560f3c5bc1347b705589e" => :catalina
   end
   
-  depends_on "openssl@1.1"
+  option "OPENSSL_STATIC=1"
   depends_on "rust" => :build
 
   def install
-    system "cargo", "install", "--locked", "--root", prefix, "--version", version, name
+    system "cargo", "install", "--lib", "--locked", "--root", prefix, "--version", version, name
   end
 
   test do
