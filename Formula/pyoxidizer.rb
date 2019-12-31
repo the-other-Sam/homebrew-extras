@@ -7,7 +7,8 @@ class Pyoxidizer < Formula
   bottle do
     cellar :any_skip_relocation
     root_url "https://dl.bintray.com/the-other-sam/bottles-homebrew-extras"
-    sha256 "f3ed0083a5096251756dc44263e2ad5594eb634d56d356a80bb1b37b5a8fd7fd" => :catalina
+    sha256 "6bef489b28c89e379b8870296e229daf2e3e4ae6e1dbd6a5bc3584aea2d3105e" => :catalina
+    sha256 "cc0e2f4bd2f416a29f040de9f55528536191e101e0f64885713bffceeab5501d" => :x86_64_linux
   end
   
   option "OPENSSL_STATIC=1"
