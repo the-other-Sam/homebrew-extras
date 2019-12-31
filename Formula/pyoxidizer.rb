@@ -7,14 +7,14 @@ class Pyoxidizer < Formula
   bottle do
     cellar :any_skip_relocation
     root_url "https://dl.bintray.com/the-other-sam/bottles-homebrew-extras"
-    sha256 "a2e2815d88798c5a3e0975d5de4c7210968ea97cbe2560f3c5bc1347b705589e" => :catalina
+    sha256 "f3ed0083a5096251756dc44263e2ad5594eb634d56d356a80bb1b37b5a8fd7fd" => :catalina
   end
   
   option "OPENSSL_STATIC=1"
   depends_on "rust" => :build
 
   def install
-    system "cargo", "install", "--lib", "--locked", "--root", prefix, "--version", version, name
+    system "cargo", "install", "--locked", "--root", prefix, "--version", version, name
   end
 
   test do
