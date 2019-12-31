@@ -12,11 +12,11 @@ class Pyoxidizer < Formula
   depends_on "rust" => :build
 
   def install
-    system "cargo", "install", "--root", prefix, "--version", version, name
+    system "cargo", "install", "--locked", "--root", prefix, "--path", "."
   end
 
   test do
     output = shell_output(bin/"pyoxidizer --version")
-    assert_match "pyoxidizer version version (HEAD)", output
+    assert_match "pyoxidizer version #{version} (HEAD)", output
   end
 end
