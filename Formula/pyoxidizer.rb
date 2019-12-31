@@ -8,7 +8,7 @@ class Pyoxidizer < Formula
   depends_on "rust" => :build
 
   def install
-    system "cargo", "install", "--root", prefix, "--version", version, name
+    system "cargo", "install", "--root", prefix, "--version", version, .
   end
 
   test do
