@@ -10,6 +10,7 @@ class Pyoxidizer < Formula
     sha256 "522508270f20a8e06dd31d969f861a67a0dcafec026dc55cfddb82b2b7490b37" => :catalina
   end
   
+  depends_on "openssl@1.1"
   depends_on "rust" => :build
 
   def install
