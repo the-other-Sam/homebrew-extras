@@ -16,7 +16,6 @@ class Stoml < Formula
     mkdir_p buildpath/"src/github.com/freshautomations"
     ln_s buildpath, buildpath/"src/github.com/freshautomations/stoml"
     ENV["GOPATH"] = "#{buildpath}/Godeps/_workspace:#{buildpath}"
-    # Language::Go.stage_deps resources, buildpath/"src"
     system "go", "build", "-o", "stoml"
     bin.install "stoml"
   end
