@@ -17,7 +17,6 @@ class Stemplate < Formula
     mkdir_p buildpath/"src/github.com/freshautomations"
     ln_s buildpath, buildpath/"src/github.com/freshautomations/stemplate"
     ENV["GOPATH"] = "#{buildpath}/Godeps/_workspace:#{buildpath}"
-    # Language::Go.stage_deps resources, buildpath/"src"
     system "go", "build", "-o", "stemplate"
     bin.install "stemplate"
   end
